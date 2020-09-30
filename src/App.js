@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import Input from'./Components/UserInput'
+import Output from './Components/UserOutput'
 import './App.css';
 
+
 function App() {
+
+  let [state,setState]=useState(
+     {
+       username:"Saksham Pratap Singh"
+     }
+  );
+
+  function nameStateHandler(event)
+  {
+    setState(
+      {
+        username:event.target.value
+      }
+    )
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>This is a React Application!</h1>
+      <Input handler={nameStateHandler} para1={state.username}/>
+      <Output para1={state.username}  />
     </div>
   );
 }

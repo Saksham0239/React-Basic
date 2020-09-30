@@ -1,0 +1,11 @@
+.inp{
+    align-content: center;
+    width: fit-content;
+    padding: 10px ;
+    border: 2px solid #cccccc;
+    box-shadow: 2px 2px 2px 2px #cccccc;
+    margin: auto;
+    margin-top: 20px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
